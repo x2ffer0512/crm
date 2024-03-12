@@ -1,0 +1,21 @@
+# Python
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+
+# IDE files
+.idea/
+.vscode/
+
+# Compiled files
+*.pyc
+
+# Log files
+*.log
+
+# Ignore any other files or directories as needed
