@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 
     'django_filters',
 
-    'storages',
+    # 'storages',
 ]
 
 MIDDLEWARE = [
@@ -82,12 +82,8 @@ WSGI_APPLICATION = 'crm1.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'demo_1',
-        'USER': 'x2ffer12',
-        'PASSWORD': 'heap1FY!',
-        'HOST': 'database-1.cxosksqo0ka1.ap-southeast-2.rds.amazonaws.com',
-        'PORT': '5432'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlit3'),
 
     }
 }
@@ -147,16 +143,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'salongakristoffer12@gmail.com'
-EMAIL_HOST_PASSWORD = 'apga mzmz emff fpkd'
-
-#S3 BUCKETS CONFIG
-
-AWS_ACCESS_KEY_ID = 'AKIA6ODUZC7GZ3TNPXLU'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'x2ffer12-crm1-bucket'
-
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
+# EMAIL_USE_TLS = True

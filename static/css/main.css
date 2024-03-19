@@ -1,0 +1,19 @@
+
+#logo{
+    max-width: 200px !important;
+    max-height: 200px !important;
+    width: auto !important;
+    height: auto !important;
+}
+body {
+    background-color: #ebeff5; 
+}
+#total-orders{
+    background-color: #4cb4cf
+}
+#orders-delivered{
+    background-color: #7abecc;
+}
+#orders-pending{
+    background-color: #7cd1c0;
+}
